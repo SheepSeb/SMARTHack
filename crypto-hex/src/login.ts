@@ -1,6 +1,6 @@
 import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup,createUserWithEmailAndPassword  } from '@firebase/auth';
 import { auth, provider } from './firebase';
-import { isAuth } from './store';
+import { isAuth, userName } from './store';
 
 export function loginned(){
     const res = signInWithPopup(auth, provider)
@@ -8,6 +8,7 @@ export function loginned(){
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user_login = result.user;
+            userName.set(user_login.displayName);
             console.log(result.user.photoURL)
             isAuth.set(true);
         })

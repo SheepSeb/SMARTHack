@@ -7,6 +7,7 @@
 
     const create = () =>{
         createAccount(email,password);
+        
     }
 
 </script>

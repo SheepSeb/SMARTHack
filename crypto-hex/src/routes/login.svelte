@@ -18,13 +18,14 @@
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-<section class="vh-100">
+    <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100" >
        <div class="row d-flex justify-content-center align-items-center" id="card">
+        <h1 class="text-center p-5">User login</h1>
         <div class="col-md-12 col-lg-6 col-xl-4 offset-xl-1">
-        <h1 class="text-center">User login</h1>
-       
+        
+        <div class="container">
           <form>
             <!-- Email input -->
             <div class="form-outline mb-4">
@@ -42,27 +43,19 @@
              
             </div>
   
-            <div class="d-flex justify-content-between align-items-center">
-              <!-- Checkbox -->
-              <div class="form-check mb-0">
-                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                <label class="form-check-label" for="form2Example3">
-                  Remember me
-                </label>
-              </div>
-              <a href="#!" class="text-body">Forgot password?</a>
-            </div>
-  
             <div class="text-center text-lg-start mt-4 pt-2">
-              <button type="button" class="btn btn-outline-success btn-lg" id="loginBtn"
+              <button type="button" class="btn btn-outline-primary btn-lg" id="loginBtn"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={logsEmail}>Login</button>
-              <button type="button" class="btn btn-outline-success btn-lg" id="loginBtn"
+                <br>
+                <br>
+              <button type="button" class="btn btn-outline-primary btn-lg" id="loginBtn"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={logsGoogle}>Login Google</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                  class="link-danger">Register</a></p>
+                  class="link-danger">>Register</a></p>
             </div>
   
           </form>
+        </div>
         </div>
       </div>
     </div>
@@ -91,7 +84,6 @@
   }
   
   #userlog {
-    
     font-size: 35px;
   }
   
