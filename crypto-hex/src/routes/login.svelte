@@ -8,6 +8,10 @@
 
 </script>
 
+<link rel='icon' type='image/png' href='/favicon.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <section class="vh-100">
     <div class="container-fluid h-custom">
       <div class="row d-flex justify-content-center align-items-center h-100" >
@@ -46,6 +50,8 @@
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="button" class="btn btn-outline-success btn-lg" id="loginBtn"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={logs}>Login</button>
+              <button type="button" class="btn btn-outline-success btn-lg" id="loginBtn"
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={logs}>Login Google</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
                   class="link-danger">Register</a></p>
             </div>
@@ -56,3 +62,47 @@
     </div>
     </div>
   </section>
+
+<style>
+  #loginBtn {
+    border-radius: 100px;
+    width: 400px;
+    height: 60px;
+  }
+  
+  #inputEmail, #inputPassword {
+    width: 400px;
+    border-radius: 400px;
+    margin-bottom: 20px;
+    height: 60px;
+  
+  }
+  img {
+  width: 250px;
+  height: 250px;
+  margin-left: 50px;;
+  padding: 20px;;
+  }
+  
+  #userlog {
+    
+    font-size: 35px;
+  }
+  
+  
+  .divider:after,
+  .divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: black;
+  }
+  .h-custom {
+    height: calc(100% - 73px);
+  }
+  @media (max-width: 450px) {
+    .h-custom {
+      height: 100%;
+      
+    }
+  }</style>
