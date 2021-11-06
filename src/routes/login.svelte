@@ -13,9 +13,9 @@
      <div class="row d-flex justify-content-center align-items-center" id="card">
       <div class="col-md-12 col-lg-6 col-xl-4 offset-xl-1">
 	  <h1 class="text-center">User login</h1>
-	 
-	  
-	   <img src="css/cryptography.png" class="img-fluid">
+
+
+	   <!-- <img src="css/cryptography.png" class="img-fluid" alt="icon of a lock"> -->
         <form>
           <!-- Email input -->
           <div class="form-outline mb-4">
