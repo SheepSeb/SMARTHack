@@ -1,10 +1,9 @@
-import App from './App.svelte';
+import Login from './login.svelte';
 
-const app = new App({
+const login = new Login({
 	target: document.body,
 	props: {
-		name: 'world'
 	}
 });
 
-export default app;
+export default login;
