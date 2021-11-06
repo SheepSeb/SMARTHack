@@ -1,19 +1,16 @@
 <script lang="ts">
-    import {loginned,logginWithEmail} from '../login'
+    import {createAccount} from '../login'
     import {app} from '../firebase'
 
     let email = null;
     let password = null;
 
-    const logsGoogle = () =>{
-        loginned()
-    }
-
-    const logsEmail = () =>{
-      logginWithEmail(email,password);
+    const create = () =>{
+        createAccount(email,password);
     }
 
 </script>
+
 
 <link rel='icon' type='image/png' href='/favicon.png'>
 	<link rel='stylesheet' href='/global.css'>
@@ -24,7 +21,7 @@
       <div class="row d-flex justify-content-center align-items-center h-100" >
        <div class="row d-flex justify-content-center align-items-center" id="card">
         <div class="col-md-12 col-lg-6 col-xl-4 offset-xl-1">
-        <h1 class="text-center">User login</h1>
+        <h1 class="text-center">User Register</h1>
        
           <form>
             <!-- Email input -->
@@ -56,9 +53,7 @@
   
             <div class="text-center text-lg-start mt-4 pt-2">
               <button type="button" class="btn btn-outline-success btn-lg" id="loginBtn"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={logsEmail}>Login</button>
-              <button type="button" class="btn btn-outline-success btn-lg" id="loginBtn"
-                style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={logsGoogle}>Login Google</button>
+                style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={create}>Register</button>
               <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
                   class="link-danger">Register</a></p>
             </div>
