@@ -2,7 +2,6 @@
     import {loginned,logginWithEmail} from '../login'
     import {app} from '../firebase'
 
-
     let email = null;
     let password = null;
 
@@ -13,7 +12,6 @@
     const logsEmail = () =>{
       logginWithEmail(email,password);
     }
-
 </script>
 
 <link rel='icon' type='image/png' href='/favicon.png'>
