@@ -42,7 +42,7 @@
         <div class=".d-flex justify-center text-center">
             <Card >
               <img src="src/images/padlock.png" style="height: 120px; width:120px; padding:10px;" class="text-center" alt="background" />
-              <CardTitle class="justify-center">Add a new key</CardTitle>
+              <CardTitle class="justify-center">Manage keys</CardTitle>
               <Row>
               <Col>
             <Button fab size="default" class="indigo accent-2 white-text" on:click={() => (active1 = true)}>
