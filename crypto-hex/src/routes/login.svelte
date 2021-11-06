@@ -1,6 +1,10 @@
 <script lang="ts">
+    import { AppBar, Button, Icon, MaterialApp, Card, Dialog,CardTitle, Row, Col,  } from 'svelte-materialify';
     import {loginned,logginWithEmail} from '../login'
     import {app} from '../firebase'
+    import Register from "./register.svelte";
+
+    let active1;
 
     let email = null;
     let password = null;
@@ -13,7 +17,7 @@
       logginWithEmail(email,password);
     }
 </script>
-
+<MaterialApp>
 <link rel='icon' type='image/png' href='/favicon.png'>
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
@@ -50,10 +54,10 @@
                 <br>
               <button type="button" class="btn btn-outline-primary btn-lg" id="loginBtn"
                 style="padding-left: 2.5rem; padding-right: 2.5rem;" on:click={logsGoogle}>Login Google</button>
-              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
-                  class="link-danger">>Register</a></p>
+              <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account?</p>
             </div>
-  
+            <Button
+                  class="link-danger" on:click={() => (active1 = true)}>Register</Button>
           </form>
         </div>
         </div>
@@ -61,6 +65,12 @@
     </div>
     </div>
   </section>
+  <Dialog class="pa-4 text-center" bind:active={active1}>
+    <Register />
+  </Dialog>
+</MaterialApp>
+
+
 
 <style>
   #loginBtn {

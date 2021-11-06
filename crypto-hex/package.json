@@ -38,6 +38,7 @@
     "svelte-kit": "^1.0.0",
     "svelte-material-ui": "^5.0.0-beta.8",
     "svelte-materialify": "^0.3.11",
-    "svelte-routing": "^1.6.0"
+    "svelte-routing": "^1.6.0",
+    "tailwindcss": "^2.2.19"
   }
 }

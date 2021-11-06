@@ -1,7 +1,9 @@
-<script>
-    import { AppBar, Button, Icon, MaterialApp, Card, CardActions,CardTitle, Row, Col,  } from 'svelte-materialify';
+<script lang="ts">
+    import { AppBar, Button, Icon, MaterialApp, Card, Dialog,CardTitle, Row, Col,  } from 'svelte-materialify';
     import { faUser, faPlus, faCog } from '@fortawesome/free-solid-svg-icons'
     import { userName } from '../store';
+    let active1;
+    let active2;
 </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <MaterialApp>
@@ -26,7 +28,7 @@
                   <CardTitle class="justify-center">Add a new key</CardTitle>
                   <Row>
                   <Col>
-                <Button fab size="default" class="indigo accent-2 white-text">
+                <Button fab size="default" class="indigo accent-2 white-text" on:click={() => (active1 = true)}>
                     <Icon path={faPlus.icon[4]} viewWidth={faPlus.icon[0]} viewHeight={faPlus.icon[1]} />
                   </Button>
                 </Col>
@@ -43,7 +45,7 @@
               <CardTitle class="justify-center">Add a new key</CardTitle>
               <Row>
               <Col>
-            <Button fab size="default" class="indigo accent-2 white-text">
+            <Button fab size="default" class="indigo accent-2 white-text" on:click={() => (active1 = true)}>
                 <Icon path={faPlus.icon[4]} viewWidth={faPlus.icon[0]} viewHeight={faPlus.icon[1]} />
               </Button>
             </Col>
@@ -54,4 +56,13 @@
     </Col>
     </Row>
   </div>
+
+  <Dialog class="pa-4 text-center" bind:active={active1}>
+    <!--FOR EACH HERE-->
+  </Dialog>
+
+  <Dialog class="pa-4 text-center" bind:active={active2}>
+    <!--FOR EACH HERE-->
+  </Dialog>
+
 </MaterialApp>
