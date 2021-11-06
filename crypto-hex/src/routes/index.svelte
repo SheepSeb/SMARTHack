@@ -1,11 +1,11 @@
 <script>
     import Login from "./login.svelte";
     import Register from "./register.svelte";
-    import {isAuth} from '../store';
+    import {isAuth,goingRegister} from '../store';
 </script>
 
 {#if $isAuth==true}
-<Login />
+<Main />
 {:else}
-<Register />
+<Login />
 {/if}
