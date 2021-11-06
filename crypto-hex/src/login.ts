@@ -8,6 +8,7 @@ export function loginned(){
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user_login = result.user;
+            console.log(result.user.photoURL)
             isAuth.set(true);
         })
 }
