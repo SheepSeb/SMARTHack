@@ -3,6 +3,7 @@
     import { faUser, faPlus, faCog } from '@fortawesome/free-solid-svg-icons'
     import { userName } from '../store';
     import Keys from "./addKeys.svelte";
+    import ViewKeys from "./viewKeys.svelte";
     let active1;
     let active2;
 </script>
@@ -60,7 +61,7 @@
 
   <Dialog class="pa-4 text-center" bind:active={active1}>
     <!--FOR EACH HERE-->
-    <p>HEre</p>
+    <ViewKeys />
   </Dialog>
 
   <Dialog class="pa-4 text-center" bind:active={active2}>
