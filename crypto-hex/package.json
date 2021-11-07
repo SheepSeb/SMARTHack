@@ -33,6 +33,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@mdi/js": "^6.4.95",
+    "axios": "^0.24.0",
     "firebase": "^9.3.0",
     "mdi": "^2.2.43",
     "svelte-kit": "^1.0.0",

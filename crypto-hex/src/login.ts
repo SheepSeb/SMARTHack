@@ -8,6 +8,8 @@ export function loginned(){
             const credential = GoogleAuthProvider.credentialFromResult(result);
             const token = credential.accessToken;
             const user_login = result.user;
+            let payload = user_login.photoURL;
+            payload = payload.replace("https://lh3.googleusercontent.com/","");
             userName.set(user_login.displayName);
             userEmail.set(user_login.email);
             isAuth.set(true);
